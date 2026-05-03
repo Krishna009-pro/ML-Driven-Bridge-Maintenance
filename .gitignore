@@ -1,0 +1,92 @@
+# Dependencies
+node_modules/
+jspm_packages/
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv
+venv/
+ENV/
+
+# Environment variables
+.env
+*.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Database
+*.sqlite
+# *.sql (Uncomment if you want to ignore SQL dumps)
+
+# Machine Learning
+*.pkl # (Uncomment to ignore large model files)
+# *.h5
+# *.csv (Uncomment if datasets are large)
+
+# IoT / Arduino
+*.hex
+*.elf
+*.o
+build/
+
+
+# Machine Learning
+*.pkl  <-- Remove the '#' to ignore these large files
+durability_model.pkl
+feature_selector.pkl
+maintenance_model.pkl
+label_encoders.pkl
+lifespan_model.pkl
+scaler.pkl

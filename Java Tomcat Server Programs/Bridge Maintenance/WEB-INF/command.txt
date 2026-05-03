@@ -1,0 +1,1 @@
+ javac -cp "C:\xampp\tomcat\lib\servlet-api.jar;C:\xampp\tomcat\webapps\Bridge Maintenance\WEB-INF\lib\json-simple-1.1.1.jar;C:\xampp\tomcat\webapps\Bridge Maintenance\WEB-INF\lib\mysql-connector-j-9.1.0.jar" -d . *.java

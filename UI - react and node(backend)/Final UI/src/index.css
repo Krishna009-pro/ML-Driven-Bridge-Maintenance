@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --bg-mesh-light: 
+      radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.08) 0px, transparent 50%);
+
+    --bg-mesh-dark: 
+      radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(79, 70, 229, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+  }
+
+  /* Robust Theme Handling - Hardened against extensions */
+  html {
+    @apply transition-colors duration-500;
+    min-height: 100vh;
+    background-color: #f8fafc !important; /* Force light bg for base */
+  }
+
+  html.dark {
+    background-color: #03060c !important; /* Force dark bg for base */
+  }
+
+  body {
+    @apply text-slate-900 transition-colors duration-500 overflow-x-hidden;
+    font-family: var(--font-inter);
+    min-height: 100vh;
+    background-color: transparent !important;
+    background-image: var(--bg-mesh-light) !important;
+    background-attachment: fixed;
+  }
+
+  html.dark body {
+    @apply text-white;
+    background-image: var(--bg-mesh-dark) !important;
+  }
+
+  /* Custom Scrollbar for a premium look */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-sky-500/50 transition-colors;
+  }
+
+  ::selection {
+    @apply bg-sky-500/30 text-sky-900 dark:text-sky-100;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/70 dark:bg-slate-900/40 backdrop-blur-xl border border-white/20 dark:border-slate-800/50 shadow-xl;
+  }
+  
+  .nav-item-active {
+    @apply bg-sky-500/10 text-sky-600 dark:text-sky-400 border-r-4 border-sky-500 font-bold;
+  }
+}
+
+@layer utilities {
+  .animate-slow-fade {
+    animation: slow-fade 1.5s ease-out forwards;
+  }
+
+  @keyframes slow-fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

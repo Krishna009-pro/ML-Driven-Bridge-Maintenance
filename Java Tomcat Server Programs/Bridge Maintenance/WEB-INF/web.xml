@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/myServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddBridge</servlet-name>
+        <servlet-class>AddBridge</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AddBridge</servlet-name>
+        <url-pattern>/AddBridge</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddUser</servlet-name>
+        <servlet-class>AddUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUser</servlet-name>
+        <url-pattern>/AddUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MLAPI</servlet-name>
+        <servlet-class>MLAPI</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MLAPI</servlet-name>
+        <url-pattern>/MLAPI</url-pattern>
+    </servlet-mapping>
+
+    
+    <servlet>
+        <servlet-name>PredictionAPI</servlet-name>
+        <servlet-class>PredictionAPI</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PredictionAPI</servlet-name>
+        <url-pattern>/PredictionAPI</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IoTAPI</servlet-name>
+        <servlet-class>IoTAPI</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IoTAPI</servlet-name>
+        <url-pattern>/IoTAPI</url-pattern>
+    </servlet-mapping>
+
+
+
+        <servlet>
+        <servlet-name>UpdateVolume</servlet-name>
+        <servlet-class>UpdateVolume</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateVolume</servlet-name>
+        <url-pattern>/UpdateVolume</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>AssignMaintenace</servlet-name>
+        <servlet-class>AssignMaintenace</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AssignMaintenace</servlet-name>
+        <url-pattern>/AssignMaintenace</url-pattern>
+    </servlet-mapping>
+    
+
+</web-app>
