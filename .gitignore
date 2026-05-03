@@ -11,7 +11,6 @@ build/
 out/
 target/
 *.class
-*.jar
 *.war
 *.ear
 
