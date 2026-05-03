@@ -24,8 +24,8 @@ graph TD
     subgraph "Application Layer (Dual Backend)"
         C --> H[(MySQL Database)]
         G --> H
-        I[Node.js Backend] <--- API Data ---> J[React Frontend]
-        K[Java Tomcat Backend] <--- Core Logic ---> H
+        I[Node.js Backend] --- API Data --- J[React Frontend]
+        K[Java Tomcat Backend] --- Core Logic --- H
     end
 ```
 
